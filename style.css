@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+  text-decoration: none;
+}
+
+body {
+  background-image: url('https://images.pexels.com/photos/3739564/pexels-photo-3739564.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu_section {
+  width: 0px;
+  background: rgba(0,0,0,.2);;
+  height: 100%;
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: width .3s ease-in-out;
+  z-index: 2;
+ }
+ 
+
+.menu_section.active {
+  width: 300px;
+  display: flex;
+}
+ 
+ .fas.fa-bars {
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   font-size: 30px;
+   color: #fff; 
+   cursor: pointer;
+ }
+ 
+ .fas.fa-times {
+   cursor: pointer;
+   transition: font-size .2s ease-in-out;
+ }
+ 
+ .menu_section .fas.fa-times:hover {
+   font-size: 33px;
+ }
+  
+.icon_container {
+   align-self: flex-end;
+   font-size: 30px;
+   margin-right: 10px;
+   padding: 10px;
+ }
+ 
+ 
+ul {
+   padding-top: 50px;
+ }
+ 
+ ul li i {
+   padding: 5px;
+    display: flex;
+   justify-content: center;
+   align-self: center;
+   text-align: center;
+   font-size: 30px;
+  
+ }
+ 
+ li {
+   display: flex;
+   align-items: center;
+   border-bottom: 1px solid rgba(255, 255, 255, 0.329);
+   cursor: pointer;
+   transition: padding-left .33s ease-in-out, background .33s ease-in-out;
+    padding: 10px;
+ }
+ 
+ li:hover {
+   background: rgb(0, 100, 100);
+   padding-left: 20px;
+ }
+  
+
+ li a {
+   color: #fff;
+   letter-spacing: 2px;
+   font-size: 20px;
+   margin-left: 10px;
+   
+ }
+ 
+ .clock_box {
+   position: absolute;
+   bottom: 0%;
+   right: 20px;
+   color: #fff;
+   font-size: 40px;
+   letter-spacing: 2px;
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
+ }
+ 
+ .signIn_container {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   height: 300px;
+   width: 480px;
+   background: rgba(0,0,0,.2);
+   display: flex;
+   flex-direction: column; 
+   padding: 20px;
+   border-radius: 6px;
+ }
+ 
+ .signIn_container .fas.fa-times {
+   align-self: flex-end; /*moves x to far right */
+   color: #fff;
+ }
+ 
+  h1 {
+   text-align: center;
+   margin-bottom: 30px;
+   margin-top: 15px;
+   color: #fff;
+ }
+ 
+ .input_icon_container  {
+      border: 1px solid white;
+      display: flex;
+      margin-bottom: 18px;
+      border-radius: 2px;
+      /* justify-content: space-between; */
+ }
+ 
+ .input_icon_container i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  color: #fff;
+ }
+ 
+ .input_icon_container .fas.fa-user, .fas.fa-lock {
+   border-right: 1px solid #fff;
+ }
+
+ .input_icon_container input {
+   width: 70%;
+   padding: 5px;
+   background: none;
+   outline: none;
+   border: 0;
+   color: #fff;
+   
+ }
+ 
+ .fas.fa-eye {
+   display: flex;
+ }
+ 
+ .fas.fa-eye.active {
+   display: none;
+ }
+ 
+ .fas.fa-eye-slash {
+   display: none;
+ }
+ 
+ .fas.fa-eye-slash.active {
+   display: flex;
+ }
+ 
+ .show_pw {
+   font-size: 8px;
+   color: #fff;
+   align-self: center;
+ }
+  
+ .show_pw.active {
+   display: none;
+ }
+ .hide_pw {
+   display: none;
+   align-self: center;
+   font-size: 8px;
+   color: #fff;
+ }
+ 
+.hide_pw.active {
+   display: flex;
+ }
+
+.submit_button {
+  align-self: center;
+  padding: 6px;
+  color: #fff;
+  font-weight: bold;
+  border: 2px solid white;
+  width: 100%;
+  text-align: center;
+  outline: none;
+  border-radius: 2px;
+  background: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px black;
+}
+
+.submit_button:active {
+box-shadow: 1px 1px 1px black;
+}
+
+.signup_link {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+}
